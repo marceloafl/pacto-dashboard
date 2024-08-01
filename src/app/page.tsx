@@ -1,3 +1,4 @@
+import Search from "@/components/search/input/Search";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
@@ -14,7 +15,7 @@ const montserrat = Montserrat({
 export default function Home() {
   return (
     <main className={`${montserrat.className}`}>
-      <p className="font-normal text-pactto-charcoal">Initial configs</p>
+      <Search />
     </main>
   );
 }

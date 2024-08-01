@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary: #ffba03;
+  --secondary: #ffdd81;
+  --accent: #1cbaa6;
+  --pactto-charcoal: #191d1f;
+  --pactto-gray: #bab8b8;
+  --pactto-light-gray: #f3f3f2;
+  --pactto-green: #7e9c3d;
+  --pactto-red: #d92336;
+  --default-black-bg: #232225;
+  --default-gray-elements: "#bebebe";
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: none;
+  border-color: #e5e7eb;
+}

@@ -1,37 +1,3 @@
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: [
-//     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-//   ],
-//   theme: {
-//     extend: {
-//       backgroundImage: {
-//         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-//         "gradient-conic":
-//           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-//       },
-//     },
-//     fontFamily: {
-//       montserrat: ["var(--font-montserrat)"],
-//       museo: ["var(--font-museo)"],
-//     },
-//     colors: {
-//       primary: "#ffba03",
-//       secondary: "#ffdd81",
-//       accent: "#1cbaa6",
-//       charcoal: "#191d1f",
-//       gray: "#bab8b8",
-//       "light-gray": "#f3f3f2",
-//       red: "#d92336",
-//       green: "#7e9c3d",
-//     },
-//   },
-//   plugins: [],
-//   important: true,
-// };
-
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -47,19 +13,30 @@ const config: Config = {
         museo: ["var(--font-museo)"],
       },
       colors: {
-        primary: "#ffba03",
-        secondary: "#ffdd81",
-        accent: "#1cbaa6",
-        "pactto-charcoal": "#191d1f",
-        "pactto-gray": "#bab8b8",
-        "pactto-light-gray": "#f3f3f2",
-        "pactto-red": "#d92336",
-        "pactto-green": "#7e9c3d",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+        "pactto-charcoal": "var(--pactto-charcoal)",
+        "pactto-gray": "var(--pactto-gray)",
+        "pactto-light-gray": "var(--pactto-light-gray)",
+        "pactto-green": "var(--pactto-green)",
+        "pactto-red": "var(--pactto-red)",
+        "default-black-bg": "var(--default-black-bg)",
+        "default-gray": "var(--default-gray-elements)",
+        // primary: "#ffba03",
+        // secondary: "#ffdd81",
+        // accent: "#1cbaa6",
+        // "pactto-charcoal": "#191d1f",
+        // "pactto-gray": "#bab8b8",
+        // "pactto-light-gray": "#f3f3f2",
+        // "pactto-red": "#d92336",
+        // "pactto-green": "#7e9c3d",
+        // "pactto-black-bg": "#232225",
       },
     },
-    plugins: [],
-    important: true,
   },
+  plugins: [],
+  important: true,
 };
 
 export default config;
