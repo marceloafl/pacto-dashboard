@@ -7,13 +7,14 @@
   --secondary: #ffdd81;
   --accent: #1cbaa6;
   --pactto-charcoal: #191d1f;
-  --pactto-gray: #bab8b8;
+  --pactto-gray: #b8b8b8;
   --pactto-light-gray: #f3f3f2;
   --pactto-green: #7e9c3d;
   --pactto-red: #d92336;
-  --default-black-bg: #232225;
+  --default-black: #232225;
   --secondary-black-bg: #2f2f2f;
   --default-gray-elements: #bebebe;
+  --default-blue: #2b96fc;
 }
 
 *,
