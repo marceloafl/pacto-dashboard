@@ -22,6 +22,7 @@ const config: Config = {
         "pactto-green": "var(--pactto-green)",
         "pactto-red": "var(--pactto-red)",
         "default-black-bg": "var(--default-black-bg)",
+        "secondary-black-bg": "var(--secondary-black-bg)",
         "default-gray": "var(--default-gray-elements)",
         // primary: "#ffba03",
         // secondary: "#ffdd81",
