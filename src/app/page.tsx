@@ -1,6 +1,10 @@
-import OnboardingList from "@/components/list/onboardginToDo/OnboardingList";
+import Button from "@/components/button/Button";
+import OnboardingList, {
+  IListItem,
+} from "@/components/list/onboardginToDo/OnboardingList";
 import Search from "@/components/search/input/Search";
 import { Montserrat } from "next/font/google";
+import AddIcon from "@mui/icons-material/Add";
 
 const montserrat = Montserrat({
   weight: ["500", "700"],
@@ -13,18 +17,16 @@ const montserrat = Montserrat({
 //   variable: '--font-museo'
 // });
 
-const listItems = [
-  { text: "Open your inbox and verify your email", done: true, id: "1" },
-  { text: "Check the short video of Pactto in action", done: true, id: "2" },
+const listItems: IListItem[] = [
+  { type: "verify-email", done: true },
+  { type: "check-video", done: true },
   {
-    text: "Wanna record your computer screen or review files? Download Pactto for Mac or Windows",
+    type: "download-desktop",
     done: false,
-    id: "3",
   },
   {
-    text: "Wanna review videos, images or audio files with your phone or tablet? Download Pactto for iOS or Android",
+    type: "download-mobile",
     done: false,
-    id: "4",
   },
 ];
 
@@ -33,6 +35,13 @@ export default function Home() {
     <main className={`${montserrat.className}`}>
       <Search />
       <OnboardingList listItems={listItems} />
+      <div className="flex flex-col gap-4 w-96">
+        <Button theme="primary" startIcon={<AddIcon />}>
+          Upload new video
+        </Button>
+        <Button theme="gray">reset changes</Button>
+        <Button theme="blue">Launch</Button>
+      </div>
     </main>
   );
 }
