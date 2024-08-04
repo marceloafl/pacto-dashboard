@@ -10,45 +10,60 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import SettingsIcon from "@mui/icons-material/Settings";
 
 const menuItems = [
-  { text: "Home", icon: <HomeIcon />, href: "", id: "" },
-  { text: "Pacttos (Chats)", icon: <QuestionAnswerIcon />, href: "", id: "" },
-  { text: "Items to review", icon: <VideoLibraryIcon />, href: "", id: "" },
-  { text: "Web links you created", icon: <InsertLinkIcon />, href: "", id: "" },
+  { text: "Home", icon: <HomeIcon />, href: "/chats", id: "" },
+  {
+    text: "Pacttos (Chats)",
+    icon: <QuestionAnswerIcon />,
+    href: "/chats",
+    id: "chats",
+  },
+  {
+    text: "Items to review",
+    icon: <VideoLibraryIcon />,
+    href: "review-items",
+    id: "review-items",
+  },
+  {
+    text: "Web links you created",
+    icon: <InsertLinkIcon />,
+    href: "/links-created",
+    id: "links-created",
+  },
   {
     text: "Personal information",
     icon: <ManageAccountsIcon />,
-    href: "#",
+    href: "/personal-information",
     id: "personal-information",
   },
   {
     text: "Review packages for sale",
     icon: <CardGiftcardIcon />,
-    href: "#",
-    id: "packages-sale",
+    href: "packages-for-sale",
+    id: "packages-for-sale",
   },
   {
     text: "Pactto website",
     icon: <ViewCarouselIcon />,
-    href: "#",
+    href: "/pactto-website",
     id: "pactto-website",
   },
   {
     text: "Reference video library",
     icon: <OndemandVideoIcon />,
-    href: "#",
+    href: "/reference-video-library",
     id: "reference-video-library",
   },
   {
     text: "Subscription",
     icon: <SubscriptionsIcon />,
-    href: "#",
+    href: "/subscription",
     id: "subscription",
   },
   {
     text: "Review Settings",
     icon: <SettingsIcon />,
-    href: "#",
-    id: "review-settings",
+    href: "/settings",
+    id: "settings",
   },
 ];
 
