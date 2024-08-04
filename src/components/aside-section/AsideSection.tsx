@@ -9,14 +9,16 @@ export default function AsideSection() {
   const { isAsideVisible } = useAside();
 
   return (
-    <div className="bg-secondary-black-bg h-screen fixed top-0 left-0 min-w-64">
+    <>
       {isAsideVisible && (
-        <aside className="h-full overflow-y-auto">
-          <AsideLogo />
-          <AsideProfileSummary />
-          <AsideMenu />
-        </aside>
+        <div className="bg-secondary-black-bg h-screen fixed top-0 left-0 min-w-64">
+          <aside className="h-full overflow-y-auto">
+            <AsideLogo />
+            <AsideProfileSummary />
+            <AsideMenu />
+          </aside>
+        </div>
       )}
-    </div>
+    </>
   );
 }
