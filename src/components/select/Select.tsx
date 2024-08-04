@@ -1,17 +1,19 @@
 "use client";
 
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent } from "react";
 
 export default function Select({
   label,
   options,
   value,
-  handleChange,
+  onChange,
+  customClassname,
 }: {
-  label: string;
+  label?: string;
   options: string[];
-  value: string;
-  handleChange?: (event: ChangeEvent<HTMLSelectElement>) => {};
+  value?: string;
+  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  customClassname?: string;
 }) {
   return (
     <div className="flex flex-col gap-2">
@@ -20,10 +22,10 @@ export default function Select({
       </label>
       <select
         value={value}
-        onChange={handleChange}
+        onChange={onChange}
         name="cars"
         id="cars"
-        className="w-full border border-pactto-gray border-solid bg-default-black text-white hover:border-white h-14 p-3"
+        className={`w-full border border-pactto-gray border-solid bg-default-black text-white hover:border-white h-14 p-3 ${customClassname}`}
       >
         {options.map((option, index) => (
           <option key={index} value={option}>

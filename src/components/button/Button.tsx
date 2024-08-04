@@ -1,7 +1,7 @@
 import { Button as MuiButton, Stack } from "@mui/material/";
 
 export const buttonTheme = {
-  primary: "bg-accent text-white",
+  primary: "bg-accent text-black",
   gray: "bg-pactto-gray text-default-black",
   blue: "bg-default-blue text-default-black",
 };

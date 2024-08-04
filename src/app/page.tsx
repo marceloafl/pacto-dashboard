@@ -1,3 +1,5 @@
+"use client";
+
 import OnboardingList, {
   IListItem,
 } from "@/components/list/onboardingToDo/OnboardingList";
@@ -17,6 +19,10 @@ import Select from "@/components/select/Select";
 import Button from "@/components/button/Button";
 import SwitchButton from "@/components/package-board/switch/Switch";
 import DeletePackageButton from "@/components/package-board/delete-package/DeletePackage";
+import BoardTitle from "@/components/package-board/board-title/BoardTitle";
+import Board from "@/components/package-board/board/Board";
+import RadioList from "@/components/list/radio-list/RadioList";
+import { ChangeEvent } from "react";
 
 const montserrat = Montserrat({
   weight: ["500", "700"],
@@ -43,6 +49,16 @@ const listItems: IListItem[] = [
 ];
 
 export default function Home() {
+  const onChange = (
+    event: ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    {
+      console.log("On Change");
+    }
+  };
+
   return (
     <main className={`flex flex-col gap-4 p-8 ${montserrat.className}`}>
       <Search />
@@ -56,9 +72,24 @@ export default function Home() {
         <Button theme="blue">Launch</Button>
       </div>
       <div className="flex flex-col gap-4">
-        <Input placeholder="Custom placeholder" type="text" />
-        <Input placeholder="Custom placeholder" type="password" />
-        <Input placeholder="Custom placeholder" type="email" />
+        <Input
+          placeholder="Custom placeholder"
+          type="text"
+          id="text-input"
+          onChange={onChange}
+        />
+        <Input
+          placeholder="Custom placeholder"
+          type="password"
+          id="password-input"
+          onChange={onChange}
+        />
+        <Input
+          placeholder="Custom placeholder"
+          type="email"
+          id="email-input"
+          onChange={onChange}
+        />
         <CountryInput />
         <CountryInput error />
       </div>
@@ -72,7 +103,11 @@ export default function Home() {
           "Inspections",
         ]}
       />
-      <TextArea />
+      <TextArea
+        tooltip="/tooltip-about-me.png"
+        tooltipAltText="Tooltip alt text"
+        onChange={onChange}
+      />
       <AddableList
         initialItems={["Expertise 1"]}
         placeholder="Add expertise"
@@ -80,14 +115,33 @@ export default function Home() {
       />
       <Avatar />
       <ListWithIcon />
+      <RadioList
+        onChange={onChange}
+        items={["Video", "Image", "File (PDF, txt, etc)"]}
+        orientation="horizontal"
+      />
+      <RadioList
+        onChange={onChange}
+        items={[
+          "Single file review (e.g. video, image, or PDF)",
+          "Single link review (e.g. LinkedIn URL, portfolio)",
+          "Single review of multiple files (e.g. 2 videos and 1 image, reviewed together)",
+        ]}
+      />
       <Slider />
       <div className="flex gap-3">
         <ColorPicker initialColor="#FFFFFF" label="Color 1" />
         <ColorPicker initialColor="#FF0000" label="Color 2" />
       </div>
-      <Select label="Camera" options={["Default", "Dell"]} value="Default" />
+      <Select
+        label="Camera"
+        options={["Default", "Dell"]}
+        value="Default"
+        onChange={onChange}
+      />
       <SwitchButton label="Package is unpublished" />
       <DeletePackageButton label="Delete package" />
+      <Board />
     </main>
   );
 }
