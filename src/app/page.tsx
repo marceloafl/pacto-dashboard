@@ -2,12 +2,18 @@ import Button from "@/components/button/Button";
 import OnboardingList, {
   IListItem,
 } from "@/components/list/onboardingToDo/OnboardingList";
-import Search from "@/components/search/input/Search";
+import Search from "@/components/input/search/Search";
 import { Montserrat } from "next/font/google";
 import AddIcon from "@mui/icons-material/Add";
 import Input from "@/components/input/default/Input";
 import CountryInput from "@/components/input/country/CountryInput";
 import CheckboxList from "@/components/list/checkbox-list/CheckboxList";
+import TextArea from "@/components/input/text-area/TextArea";
+import AddableList from "@/components/input/addable-list/AddableList";
+import Avatar from "@/components/avatar/AvatarWrapper";
+import ListWithIcon from "@/components/list/list-with-icon/ListWithIcon";
+import Slider from "@/components/slider/Slider";
+import ColorPicker from "@/components/color-picker/ColorPicker";
 
 const montserrat = Montserrat({
   weight: ["500", "700"],
@@ -37,6 +43,7 @@ export default function Home() {
   return (
     <main className={`flex flex-col gap-4 p-8 ${montserrat.className}`}>
       <Search />
+      <Search helperText="No Pacctos found" />
       <OnboardingList listItems={listItems} />
       <div className="flex flex-col gap-4 w-96">
         <Button theme="primary" startIcon={<AddIcon />}>
@@ -62,6 +69,19 @@ export default function Home() {
           "Inspections",
         ]}
       />
+      <TextArea />
+      <AddableList
+        initialItems={["Expertise 1"]}
+        placeholder="Add expertise"
+        tooltipImage="/tooltip-expertise.png"
+      />
+      <Avatar />
+      <ListWithIcon />
+      <Slider />
+      <div className="flex gap-3">
+        <ColorPicker initialColor="#FFFFFF" label="Color 1" />
+        <ColorPicker initialColor="#FF0000" label="Color 2" />
+      </div>
     </main>
   );
 }

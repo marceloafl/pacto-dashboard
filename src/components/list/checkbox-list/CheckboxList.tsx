@@ -15,7 +15,7 @@ export default function CheckboxList({ items }: { items: string[] }) {
           control={
             <Checkbox
               icon={<CheckBoxOutlineBlankIcon className="text-pactto-gray" />}
-              checkedIcon={<CheckBoxIcon />}
+              checkedIcon={<CheckBoxIcon className="text-accent" />}
             />
           }
           key={item}
