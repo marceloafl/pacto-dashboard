@@ -1,4 +1,3 @@
-import Button from "@/components/button/Button";
 import OnboardingList, {
   IListItem,
 } from "@/components/list/onboardingToDo/OnboardingList";
@@ -14,6 +13,10 @@ import Avatar from "@/components/avatar/AvatarWrapper";
 import ListWithIcon from "@/components/list/list-with-icon/ListWithIcon";
 import Slider from "@/components/slider/Slider";
 import ColorPicker from "@/components/color-picker/ColorPicker";
+import Select from "@/components/select/Select";
+import Button from "@/components/button/Button";
+import SwitchButton from "@/components/package-board/switch/Switch";
+import DeletePackageButton from "@/components/package-board/delete-package/DeletePackage";
 
 const montserrat = Montserrat({
   weight: ["500", "700"],
@@ -82,6 +85,9 @@ export default function Home() {
         <ColorPicker initialColor="#FFFFFF" label="Color 1" />
         <ColorPicker initialColor="#FF0000" label="Color 2" />
       </div>
+      <Select label="Camera" options={["Default", "Dell"]} value="Default" />
+      <SwitchButton label="Package is unpublished" />
+      <DeletePackageButton label="Delete package" />
     </main>
   );
 }
