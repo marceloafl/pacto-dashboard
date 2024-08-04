@@ -23,6 +23,7 @@ import BoardTitle from "@/components/package-board/board-title/BoardTitle";
 import Board from "@/components/package-board/board/Board";
 import RadioList from "@/components/list/radio-list/RadioList";
 import { ChangeEvent } from "react";
+import { useAside } from "@/context/MenuContext";
 
 const montserrat = Montserrat({
   weight: ["500", "700"],
@@ -49,6 +50,8 @@ const listItems: IListItem[] = [
 ];
 
 export default function Home() {
+  const { isAsideVisible, toggleAside } = useAside();
+
   const onChange = (
     event: ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -60,7 +63,17 @@ export default function Home() {
   };
 
   return (
-    <main className={`flex flex-col gap-4 p-8 ${montserrat.className}`}>
+    <section
+      className={`flex flex-col gap-4 p-8 ${montserrat.className} ${isAsideVisible ? "ml-64" : "w-full"}`}
+    >
+      {!isAsideVisible && (
+        <button
+          className="top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded"
+          onClick={toggleAside}
+        >
+          Abrir Aside
+        </button>
+      )}
       <Search />
       <Search helperText="No Pacctos found" />
       <OnboardingList listItems={listItems} />
@@ -142,6 +155,6 @@ export default function Home() {
       <SwitchButton label="Package is unpublished" />
       <DeletePackageButton label="Delete package" />
       <Board />
-    </main>
+    </section>
   );
 }
