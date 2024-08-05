@@ -1,7 +1,6 @@
 "use client";
 
 import Search from "@/components/input/search/Search";
-import { ChangeEvent } from "react";
 import { useAside } from "@/context/MenuContext";
 import PageWrapper from "@/components/page-wrapper/PageWrapper";
 import PageTitle from "@/components/page-title/PageTitle";

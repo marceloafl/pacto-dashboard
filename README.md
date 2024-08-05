@@ -1,40 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pactto Dashboard
 
-## Getting Started
+O **Pactto Dashboard** é uma aplicação web desenvolvida para utilização da ferramenta Pactto, a qual permite gravar a tela do seu computador ou do seu telefone para **revisar** vídeos, sites, imagens ou arquivos de áudio.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js**: Framework React para construção de aplicações web escaláveis e de alta performance.
+- **React**: Biblioteca JavaScript para a construção de interfaces de usuário.
+- **Material-UI (MUI)**: Biblioteca de componentes React para um design de interface moderno e acessível.
+- **Tailwind CSS**: Framework CSS para um design responsivo e estilizado de maneira eficiente.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalação
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Para iniciar o projeto localmente, siga os passos abaixo:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. Clone o repositório:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   ```
+   git clone https://github.com/usuario/pactto-dashboard.git
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Navegue até o diretório do projeto:
+   ```
+   cd pactto-dashboard
+   ```
+3. Navegue até o diretório do projeto:
 
-## Learn More
+- Com npm
 
-To learn more about Next.js, take a look at the following resources:
+  ```
+  npm install
+  ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Com yarn
+  ```
+  yarn install
+  ```
+- Com pnpm
+  ```
+  pnpm install
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Scripts
 
-## Deploy on Vercel
+Desenvolvimento: Para iniciar o servidor de desenvolvimento e ver o projeto em ação localmente:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Com npm
+  ```
+  npm run dev
+  ```
+- Com yarn
+  ```
+  yarn dev
+  ```
+- Com pnpm
+  ```
+  pnpm dev
+  ```
+- Build: Para construir a aplicação para produção:
+- Com npm
+  ```
+  npm run build
+  ```
+- Com yarn
+  ```
+  yarn build
+  ```
+- Com pnpm
+  ```
+  pnpm build
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Estrutura do Projeto
+
+- pages/: Contém as páginas da aplicação.
+- components/: Contém componentes reutilizáveis da aplicação.
+- styles/: Contém arquivos de estilos globais e temas.
+- public/: Contém arquivos estáticos acessíveis publicamente, como imagens e fontes.

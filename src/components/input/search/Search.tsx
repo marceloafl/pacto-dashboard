@@ -7,7 +7,7 @@ export default function Search({
   handleChange,
 }: {
   helperText?: string;
-  handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  handleChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
     <>

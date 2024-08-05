@@ -4,27 +4,14 @@ import OnboardingList, {
   IListItem,
 } from "@/components/list/onboardingToDo/OnboardingList";
 import Search from "@/components/input/search/Search";
-import { Montserrat } from "next/font/google";
 import AddIcon from "@mui/icons-material/Add";
 import Button from "@/components/button/Button";
 import { ChangeEvent, useState } from "react";
 import { useAside } from "@/context/MenuContext";
 import PageTitle from "@/components/page-title/PageTitle";
 import PageWrapper from "@/components/page-wrapper/PageWrapper";
-import MenuIcon from "@mui/icons-material/Menu";
 import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
 import VideoWrapper from "@/components/video-wrapper/VideoWrapper";
-
-const montserrat = Montserrat({
-  weight: ["500", "700"],
-  subsets: ["latin"],
-});
-
-// const museoSlab = Museo_Slab({
-//   weight: '700',
-//   subsets: ['latin'],
-//   variable: '--font-museo'
-// });
 
 const listItems: IListItem[] = [
   { type: "verify-email", done: true },
