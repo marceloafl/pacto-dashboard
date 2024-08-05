@@ -56,6 +56,7 @@ Desenvolvimento: Para iniciar o servidor de desenvolvimento e ver o projeto em a
   ```
   pnpm dev
   ```
+
   
 Build: Para construir a aplicação para produção:
 - Com npm
@@ -73,7 +74,9 @@ Build: Para construir a aplicação para produção:
 
 ## Estrutura do Projeto
 
-- pages/: Contém as páginas da aplicação.
-- components/: Contém componentes reutilizáveis da aplicação.
-- styles/: Contém arquivos de estilos globais e temas.
+- src/app/: Contém as páginas da aplicação.
+- src/components/: Contém componentes reutilizáveis da aplicação.
+- src/styles/: Contém arquivos de estilos globais e temas.
+- src/context/: Contém arquivos relacionados ao gerenciamento de estados globais utilizando Context API.
+- src/utils/: Contém funções utilitárias e helpers que podem ser utilizados em várias partes da aplicação.
 - public/: Contém arquivos estáticos acessíveis publicamente, como imagens e fontes.
