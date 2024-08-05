@@ -1,11 +1,19 @@
 import { IconButton, InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { ChangeEvent } from "react";
 
-export default function Search({ helperText }: { helperText?: string }) {
+export default function Search({
+  helperText,
+  handleChange,
+}: {
+  helperText?: string;
+  handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+}) {
   return (
     <>
       {helperText && <p className="text-white m-auto">{helperText}</p>}
       <TextField
+        onChange={handleChange}
         placeholder="Search"
         InputProps={{
           endAdornment: (

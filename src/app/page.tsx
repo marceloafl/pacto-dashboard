@@ -7,12 +7,13 @@ import Search from "@/components/input/search/Search";
 import { Montserrat } from "next/font/google";
 import AddIcon from "@mui/icons-material/Add";
 import Button from "@/components/button/Button";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react";
 import { useAside } from "@/context/MenuContext";
 import PageTitle from "@/components/page-title/PageTitle";
 import PageWrapper from "@/components/page-wrapper/PageWrapper";
 import MenuIcon from "@mui/icons-material/Menu";
 import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
+import VideoWrapper from "@/components/video-wrapper/VideoWrapper";
 
 const montserrat = Montserrat({
   weight: ["500", "700"],
@@ -40,15 +41,10 @@ const listItems: IListItem[] = [
 
 export default function Home() {
   const { isAsideVisible, toggleAside } = useAside();
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const onChange = (
-    event: ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
-  ) => {
-    {
-      console.log("On Change");
-    }
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
   };
 
   return (
@@ -62,15 +58,18 @@ export default function Home() {
       <section className="flex flex-col gap-6">
         <div className="flex items-center">
           <div className="w-full flex justify-between ">
-            <PageTitle>Select a video</PageTitle>
+            <PageTitle>My uploads</PageTitle>
           </div>
           <div className="w-full flex gap-4 justify-end">
             <Button theme="primary" startIcon={<AddIcon />}>
-              My uploads
+              Upload new video
             </Button>
           </div>
         </div>
-        <Search />
+        <Search handleChange={handleChange} />
+      </section>
+      <section>
+        <VideoWrapper searchTerm={searchTerm} />
       </section>
     </PageWrapper>
   );
