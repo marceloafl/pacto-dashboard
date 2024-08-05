@@ -23,7 +23,7 @@ export default function Board() {
   };
 
   return (
-    <section className="flex gap-6 border border-accent">
+    <section className="flex gap-6 border border-accent border-solid p-8 bg-[#181818]">
       <BoardSection>
         <BoardTitle title="1. Describe your package" />
         <p className={secondaryTitleStyle}>

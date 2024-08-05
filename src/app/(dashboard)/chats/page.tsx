@@ -4,6 +4,7 @@ import Search from "@/components/input/search/Search";
 import { ChangeEvent } from "react";
 import { useAside } from "@/context/MenuContext";
 import PageWrapper from "@/components/page-wrapper/PageWrapper";
+import PageTitle from "@/components/page-title/PageTitle";
 
 export default function Chats() {
   const { isAsideVisible, toggleAside } = useAside();
@@ -17,6 +18,7 @@ export default function Chats() {
           Abrir Aside
         </button>
       )}
+      <PageTitle>Pacttos (Chats)</PageTitle>
       <Search helperText="No Pacctos found" />
     </PageWrapper>
   );

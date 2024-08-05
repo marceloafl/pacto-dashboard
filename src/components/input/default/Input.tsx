@@ -7,7 +7,7 @@ interface IInputProps {
   id: string;
   label?: string;
   customClassname?: string;
-  onChange: (
+  onChange?: (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
 }
@@ -21,7 +21,7 @@ export default function Input({
   onChange,
 }: IInputProps) {
   return (
-    <div className={customClassname}>
+    <div className={`flex flex-col gap-2 ${customClassname}`}>
       <label htmlFor={id}>{label}</label>
       <TextField
         onChange={onChange}

@@ -9,7 +9,7 @@ interface TextAreaProps {
   tooltipAltText?: string;
   placeholder?: string;
   label?: string;
-  onChange: (
+  onChange?: (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
 }
@@ -22,7 +22,7 @@ export default function TextArea({
   onChange,
 }: TextAreaProps) {
   return (
-    <div>
+    <div className="flex flex-col gap-2">
       <p>{label}</p>
       <div className="bg-gray-500 w-full h-36 p-3 flex">
         <TextareaAutosize

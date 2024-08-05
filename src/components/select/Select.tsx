@@ -12,11 +12,11 @@ export default function Select({
   label?: string;
   options: string[];
   value?: string;
-  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  onChange?: (event: ChangeEvent<HTMLSelectElement>) => void;
   customClassname?: string;
 }) {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 w-full min-w-52">
       <label htmlFor="cars" className="text-white text-sm">
         {label}
       </label>

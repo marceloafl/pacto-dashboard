@@ -7,7 +7,7 @@ import VolumeDown from "@mui/icons-material/VolumeDown";
 import VolumeUp from "@mui/icons-material/VolumeUp";
 import { useState } from "react";
 
-export default function Slider() {
+export default function Slider({ label }: { label?: string }) {
   const [value, setValue] = useState<number>(30);
 
   const handleChange = (event: Event, newValue: number | number[]) => {
@@ -16,7 +16,7 @@ export default function Slider() {
 
   return (
     <Box className="flex items-center gap-5 text-white text-sm">
-      <p>Brush size for tools</p>
+      <p>{label}</p>
       <MuiSlider
         defaultValue={30}
         onChange={handleChange}

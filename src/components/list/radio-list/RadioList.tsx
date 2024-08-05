@@ -26,7 +26,7 @@ export default function RadioList({
   onChange,
 }: IRadioListProps) {
   return (
-    <FormControl className="text-pactto-gray">
+    <FormControl className="text-pactto-gray flex flex-col gap-2">
       <label htmlFor={id} className="text-white">
         {label}
       </label>

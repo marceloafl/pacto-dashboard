@@ -141,7 +141,7 @@ export default function Home() {
           "Single review of multiple files (e.g. 2 videos and 1 image, reviewed together)",
         ]}
       />
-      <Slider />
+      <Slider label="Brush size for tools" />
       <div className="flex gap-3">
         <ColorPicker initialColor="#FFFFFF" label="Color 1" />
         <ColorPicker initialColor="#FF0000" label="Color 2" />

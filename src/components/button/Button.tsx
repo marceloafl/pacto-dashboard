@@ -7,8 +7,8 @@ export const buttonTheme = {
 };
 
 interface IButtonProps {
-  children?: React.ReactNode;
-  theme?: keyof typeof buttonTheme;
+  children: React.ReactNode;
+  theme: keyof typeof buttonTheme;
   startIcon?: React.ReactNode;
 }
 
@@ -18,7 +18,7 @@ export default function Button({ theme, children, startIcon }: IButtonProps) {
       <MuiButton
         variant="outlined"
         startIcon={startIcon}
-        className={`font-semibold border-0 rounded-3xl w-full h-12 ${buttonTheme[theme]}`}
+        className={`font-semibold border-0 rounded-3xl w-full min-w-44 h-12 ${buttonTheme[theme]}`}
       >
         {children}
       </MuiButton>

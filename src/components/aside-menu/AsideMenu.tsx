@@ -10,7 +10,7 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import SettingsIcon from "@mui/icons-material/Settings";
 
 const menuItems = [
-  { text: "Home", icon: <HomeIcon />, href: "/chats", id: "" },
+  { text: "Home", icon: <HomeIcon />, href: "/", id: "home" },
   {
     text: "Pacttos (Chats)",
     icon: <QuestionAnswerIcon />,
