@@ -56,7 +56,8 @@ Desenvolvimento: Para iniciar o servidor de desenvolvimento e ver o projeto em a
   ```
   pnpm dev
   ```
-- Build: Para construir a aplicação para produção:
+  
+Build: Para construir a aplicação para produção:
 - Com npm
   ```
   npm run build
