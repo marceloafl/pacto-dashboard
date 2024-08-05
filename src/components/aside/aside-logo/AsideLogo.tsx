@@ -7,7 +7,9 @@ export default function AsideLogo() {
 
   return (
     <div className="flex items-center justify-between px-8 pt-4">
-      <Image alt="Pactto" src="/pactto-logo.svg" width={144} height={44} />
+      <a href="/">
+        <Image alt="Pactto" src="/pactto-logo.svg" width={144} height={44} />
+      </a>
       <button onClick={toggleAside}>
         <CloseIcon className="text-white cursor-pointer" />
       </button>

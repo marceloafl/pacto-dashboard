@@ -8,19 +8,13 @@ import CheckboxList from "@/components/list/checkbox-list/CheckboxList";
 import Slider from "@/components/slider/Slider";
 import ColorPicker from "@/components/color-picker/ColorPicker";
 import Select from "@/components/select/Select";
+import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
 
 export default function Settings() {
   const { isAsideVisible, toggleAside } = useAside();
   return (
     <PageWrapper>
-      {!isAsideVisible && (
-        <button
-          className="top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded"
-          onClick={toggleAside}
-        >
-          Abrir Aside
-        </button>
-      )}
+      {!isAsideVisible && <OpenAsideButton handleClick={toggleAside} />}
       <div className="flex items-center">
         <div className="w-full flex justify-between ">
           <PageTitle>Review Settings</PageTitle>
@@ -55,17 +49,17 @@ export default function Settings() {
         <div className="flex gap-4 w-fit">
           <Select
             label="Camera"
-            options={["Default", "Dell"]}
+            options={["Default", "Option 2", "Option 3"]}
             value="Default"
           />
           <Select
             label="Microphone"
-            options={["Default", "Dell"]}
+            options={["Default", "Option 2", "Option 3"]}
             value="Default"
           />
           <Select
             label="Speakers"
-            options={["Default", "Dell"]}
+            options={["Default", "Option 2", "Option 3"]}
             value="Default"
           />
         </div>

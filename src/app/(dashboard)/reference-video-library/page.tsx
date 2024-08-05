@@ -6,19 +6,13 @@ import PageTitle from "@/components/page-title/PageTitle";
 import Button from "@/components/button/Button";
 import AddIcon from "@mui/icons-material/Add";
 import Search from "@/components/input/search/Search";
+import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
 
 export default function ReferenceVideoLibrary() {
   const { isAsideVisible, toggleAside } = useAside();
   return (
     <PageWrapper>
-      {!isAsideVisible && (
-        <button
-          className="top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded"
-          onClick={toggleAside}
-        >
-          Abrir Aside
-        </button>
-      )}
+      {!isAsideVisible && <OpenAsideButton handleClick={toggleAside} />}
       <div className="flex items-center">
         <div className="w-full flex justify-between ">
           <PageTitle>Select a video</PageTitle>

@@ -8,19 +8,13 @@ import TextArea from "@/components/input/text-area/TextArea";
 import AddableList from "@/components/input/addable-list/AddableList";
 import Avatar from "@/components/avatar/AvatarWrapper";
 import AddIcon from "@mui/icons-material/Add";
+import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
 
 export default function PacttoWebsite() {
   const { isAsideVisible, toggleAside } = useAside();
   return (
     <PageWrapper>
-      {!isAsideVisible && (
-        <button
-          className="top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded"
-          onClick={toggleAside}
-        >
-          Abrir Aside
-        </button>
-      )}
+      {!isAsideVisible && <OpenAsideButton handleClick={toggleAside} />}
       <div className="flex items-center">
         <div className="w-full flex justify-between ">
           <p className="text-white text-xl">

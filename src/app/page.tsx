@@ -11,6 +11,8 @@ import { ChangeEvent } from "react";
 import { useAside } from "@/context/MenuContext";
 import PageTitle from "@/components/page-title/PageTitle";
 import PageWrapper from "@/components/page-wrapper/PageWrapper";
+import MenuIcon from "@mui/icons-material/Menu";
+import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
 
 const montserrat = Montserrat({
   weight: ["500", "700"],
@@ -51,14 +53,8 @@ export default function Home() {
 
   return (
     <PageWrapper>
-      {!isAsideVisible && (
-        <button
-          className="top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded"
-          onClick={toggleAside}
-        >
-          Abrir Aside
-        </button>
-      )}
+      {!isAsideVisible && <OpenAsideButton handleClick={toggleAside} />}
+
       <section className="flex flex-col gap-4">
         <p className="text-white text-xl">Hey Marcelo, welcome to Pactto!</p>
         <OnboardingList listItems={listItems} />

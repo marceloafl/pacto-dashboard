@@ -4,19 +4,13 @@ import { useAside } from "@/context/MenuContext";
 import PageWrapper from "@/components/page-wrapper/PageWrapper";
 import Button from "@/components/button/Button";
 import ListWithIcon from "@/components/list/list-with-icon/ListWithIcon";
+import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
 
 export default function Subscriptions() {
   const { isAsideVisible, toggleAside } = useAside();
   return (
     <PageWrapper>
-      {!isAsideVisible && (
-        <button
-          className="top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded"
-          onClick={toggleAside}
-        >
-          Abrir Aside
-        </button>
-      )}
+      {!isAsideVisible && <OpenAsideButton handleClick={toggleAside} />}
       <div className="flex flex-col gap-10">
         <p className="text-pactto-gray text-sm">
           You have access to{" "}

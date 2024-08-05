@@ -5,6 +5,7 @@ import PageWrapper from "@/components/page-wrapper/PageWrapper";
 import Input from "@/components/input/default/Input";
 import CheckboxList from "@/components/list/checkbox-list/CheckboxList";
 import Button from "@/components/button/Button";
+import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
 
 export default function PersonalInformation() {
   const { isAsideVisible, toggleAside } = useAside();
@@ -15,14 +16,7 @@ export default function PersonalInformation() {
         <Button theme="primary">Save changes</Button>
       </div>
       <div className="flex flex-col gap-8">
-        {!isAsideVisible && (
-          <button
-            className="top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded"
-            onClick={toggleAside}
-          >
-            Abrir Aside
-          </button>
-        )}
+        {!isAsideVisible && <OpenAsideButton handleClick={toggleAside} />}
         <section className="flex flex-col gap-4">
           <Input
             type="text"
