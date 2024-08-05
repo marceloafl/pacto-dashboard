@@ -1,12 +1,10 @@
-"use client";
-
-import AsideSection from "@/components/aside/aside-section/AsideSection";
-import { AsideProvider } from "@/context/MenuContext";
+import ClientOnlyLayout from "@/components/client-layout/ClienteLayout";
 import "@/styles/globals.css";
+import { Suspense } from "react";
 
-// export const metadata = {
-//   title: "Pactto",
-// };
+export const metadata = {
+  title: "Pactto",
+};
 
 export default function RootLayout({
   children,
@@ -16,14 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-screen">
       <body className=" bg-default-black h-full">
-        <AsideProvider>
-          <main className="flex h-full">
-            <AsideSection />
-            <section className="flex-1 p-4 transition-all duration-300">
-              {children}
-            </section>
-          </main>
-        </AsideProvider>
+        <Suspense fallback={<div>Loading...</div>}>
+          <ClientOnlyLayout>{children}</ClientOnlyLayout>
+        </Suspense>
       </body>
     </html>
   );

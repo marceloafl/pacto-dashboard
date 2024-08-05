@@ -12,7 +12,7 @@ export default function AsideSection() {
     <>
       {isAsideVisible && (
         <div className="bg-secondary-black-bg h-screen fixed top-0 left-0 min-w-64">
-          <aside className="h-full overflow-y-auto">
+          <aside className="h-full overflow-y-auto flex flex-col gap-2">
             <AsideLogo />
             <AsideProfileSummary />
             <AsideMenu />
