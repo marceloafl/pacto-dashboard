@@ -1,6 +1,6 @@
 "use client";
 
-import AsideSection from "@/components/aside-section/AsideSection";
+import AsideSection from "@/components/aside/aside-section/AsideSection";
 import { AsideProvider } from "@/context/MenuContext";
 import "@/styles/globals.css";
 
