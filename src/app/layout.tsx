@@ -1,4 +1,4 @@
-import ClientOnlyLayout from "@/components/client-layout/ClienteLayout";
+import ClientOnlyLayout from "@/components/client-layout/ClientLayout";
 import "@/styles/globals.css";
 import { Suspense } from "react";
 
