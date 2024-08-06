@@ -10,16 +10,10 @@ describe("Unit tests for the InputText component", () => {
     );
   });
   it("should render it properly", () => {
-    // render(
-    //   <Input id="test-input" placeholder="Enter text" label="Test Label" />,
-    // );
     expect(screen.getByLabelText("Test Label")).toBeInTheDocument();
   });
 
   it("should render it with correct placeholder and label", () => {
-    // render(
-    //   <Input id="test-input" placeholder="Enter text" label="Test Label" />,
-    // );
     const label = screen.getByLabelText("Test Label");
     const input = screen.getByPlaceholderText("Enter text");
 
