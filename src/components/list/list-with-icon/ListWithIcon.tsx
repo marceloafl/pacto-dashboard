@@ -8,7 +8,7 @@ export default function ListWithIcon() {
       <nav aria-label="main mailbox folders">
         <List className="flex flex-col gap-4">
           {listWithIconData.map((item) => (
-            <ListItem key={"item.type"} disablePadding className="flex gap-2">
+            <ListItem key={item.type} disablePadding className="flex gap-2">
               <CheckIcon className="text-accent text-base" />
               <div>{item}</div>
             </ListItem>
