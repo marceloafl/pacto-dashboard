@@ -8,7 +8,7 @@ import CheckboxList from "@/components/list/checkbox-list/CheckboxList";
 import Slider from "@/components/slider/Slider";
 import ColorPicker from "@/components/color-picker/ColorPicker";
 import Select from "@/components/select/Select";
-import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
+import OpenAsideButton from "@/components/aside/open-aside-button/OpenAsideButton";
 
 export default function Settings() {
   const { isAsideVisible, toggleAside } = useAside();

@@ -6,7 +6,7 @@ import PageTitle from "@/components/page-title/PageTitle";
 import Button from "@/components/button/Button";
 import AddIcon from "@mui/icons-material/Add";
 import Search from "@/components/input/search/Search";
-import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
+import OpenAsideButton from "@/components/aside/open-aside-button/OpenAsideButton";
 
 export default function ReferenceVideoLibrary() {
   const { isAsideVisible, toggleAside } = useAside();

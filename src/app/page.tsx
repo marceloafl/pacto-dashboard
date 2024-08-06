@@ -10,7 +10,7 @@ import { ChangeEvent, useState } from "react";
 import { useAside } from "@/context/MenuContext";
 import PageTitle from "@/components/page-title/PageTitle";
 import PageWrapper from "@/components/page-wrapper/PageWrapper";
-import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
+import OpenAsideButton from "@/components/aside/open-aside-button/OpenAsideButton";
 import VideoWrapper from "@/components/video-wrapper/VideoWrapper";
 
 const listItems: IListItem[] = [

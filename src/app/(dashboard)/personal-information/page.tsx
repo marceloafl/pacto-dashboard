@@ -5,7 +5,7 @@ import PageWrapper from "@/components/page-wrapper/PageWrapper";
 import Input from "@/components/input/default/Input";
 import CheckboxList from "@/components/list/checkbox-list/CheckboxList";
 import Button from "@/components/button/Button";
-import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
+import OpenAsideButton from "@/components/aside/open-aside-button/OpenAsideButton";
 
 export default function PersonalInformation() {
   const { isAsideVisible, toggleAside } = useAside();

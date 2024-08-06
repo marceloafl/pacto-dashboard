@@ -8,7 +8,7 @@ import TextArea from "@/components/input/text-area/TextArea";
 import AddableList from "@/components/input/addable-list/AddableList";
 import Avatar from "@/components/avatar/AvatarWrapper";
 import AddIcon from "@mui/icons-material/Add";
-import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
+import OpenAsideButton from "@/components/aside/open-aside-button/OpenAsideButton";
 
 export default function PacttoWebsite() {
   const { isAsideVisible, toggleAside } = useAside();

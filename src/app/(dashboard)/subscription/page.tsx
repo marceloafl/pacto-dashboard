@@ -4,7 +4,7 @@ import { useAside } from "@/context/MenuContext";
 import PageWrapper from "@/components/page-wrapper/PageWrapper";
 import Button from "@/components/button/Button";
 import ListWithIcon from "@/components/list/list-with-icon/ListWithIcon";
-import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
+import OpenAsideButton from "@/components/aside/open-aside-button/OpenAsideButton";
 
 export default function Subscriptions() {
   const { isAsideVisible, toggleAside } = useAside();

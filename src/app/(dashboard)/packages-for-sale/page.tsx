@@ -7,7 +7,7 @@ import AddIcon from "@mui/icons-material/Add";
 import SwitchButton from "@/components/package-board/switch/Switch";
 import DeletePackageButton from "@/components/package-board/delete-package/DeletePackage";
 import Board from "@/components/package-board/board/Board";
-import OpenAsideButton from "@/components/open-aside-button/OpenAsideButton";
+import OpenAsideButton from "@/components/aside/open-aside-button/OpenAsideButton";
 
 export default function PackagesForSale() {
   const { isAsideVisible, toggleAside } = useAside();
